@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watchlist - PopVies</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #fff;
+      padding: 20px;
+    }
+    h2 {
+      color: #ff3b3b;
+    }
+    .watchlist-movie {
+      background-color: #1f1f1f;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .watchlist-movie p {
+      margin: 0 10px 0 0;
+    }
+    .remove-btn {
+      background-color: #ff3b3b;
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .remove-btn:hover {
+      background-color: #ff1a1a;
+    }
+  </style>
+</head>
+<body>
+  <a href="dashboard.html" style="color:#ff3b3b; display:block; margin-bottom:20px;">← Back to Dashboard</a>
+
+  <h2>Your Watchlist</h2>
+  <div id="watchlist-movies"></div>
+  <main class="watchlist-container">
+  <!-- Movies from watchlist will be added here dynamically -->
+</main>
+
+
+  <script>
+    
+const watchlistContainer = document.querySelector('.watchlist-container');
+const watchlist = JSON.parse(localStorage.getItem('watchlist')) || [];
+
+watchlistContainer.innerHTML = '';
+
+watchlist.forEach(movie => {
+  const div = document.createElement('div');
+  div.classList.add('watchlist-item');
+
+  div.innerHTML = `
+    <h3>${movie.title}</h3>
+    <p>Genre: ${movie.genre}</p>
+    <p>Rating: ⭐ ${movie.rating}</p>
+  `;
+
+  watchlistContainer.appendChild(div);
+});
+
+
+    function renderWatchlist() {
+      watchlistContainer.innerHTML = '';
+      if (watchlist.length === 0) {
+        watchlistContainer.innerHTML = '<p>No movies in watchlist.</p>';
+        return;
+      }
+
+      watchlist.forEach((movie, index) => {
+        const div = document.createElement('div');
+        div.className = 'watchlist-movie';
+        div.innerHTML = `
+          <div>
+            <p><strong>${movie.title}</strong></p>
+            <p>Genre: ${movie.genre}</p>
+            <p>Rating: ${movie.rating}</p>
+          </div>
+          <button class="remove-btn">Remove</button>
+        `;
+
+        div.querySelector('.remove-btn').addEventListener('click', () => {
+          watchlist.splice(index, 1);
+          localStorage.setItem('watchlist', JSON.stringify(watchlist));
+          renderWatchlist();
+        });
+
+        watchlistContainer.appendChild(div);
+      });
+    }
+
+    renderWatchlist();
+  </script>
+</body>
+</html>
