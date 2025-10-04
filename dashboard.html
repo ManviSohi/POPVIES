@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PopVies Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Popvies</div>
+    <nav class="nav-links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="watchlist.html">Watchlist</a>
+      <a href="login.html">Logout</a>
+    </nav>
+  </header>
+
+  <div class="dashboard-layout">
+    <!-- Sidebar Filters -->
+    <aside class="sidebar">
+      <h2>Filters</h2>
+      <div class="filter-group">
+        <label for="genreSelect">Genre</label>
+        <select id="genreSelect">
+          <option value="all">All</option>
+          <option value="sci-fi">Sci-Fi</option>
+          <option value="romance">Romance</option>
+          <option value="thriller">Thriller</option>
+          <option value="anime">Anime</option>
+          <option value="drama">Drama</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="ratingSort">Sort by Rating</label>
+        <select id="ratingSort">
+          <option value="default">Default</option>
+          <option value="high">High to Low</option>
+          <option value="low">Low to High</option>
+        </select>
+      </div>
+    </aside>
+
+    <!-- Movies Grid -->
+    <main class="movies-container">
+      <div class="movie-card" data-genre="sci-fi" data-rating="8.6">
+        <a href="interstellar.html">
+        <img src="https://th.bing.com/th/id/OIP.8A707ygGKj_-MsgM-gOchgHaKe?w=115&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="Titanic">        </a>
+        <p>Interstellar</p>
+        <span class="genre">Sci-Fi</span>
+        <span class="rating">⭐ 8.6</span>
+<button class="add-watchlist">Add to Watchlist</button>
+      </div>
+
+      <div class="movie-card" data-genre="thriller" data-rating="8.8">
+        <a href="inception.html">
+        <img src="https://th.bing.com/th/id/R.be7248985232d46128041023c99fad7d?rik=m%2fYm13OWgvgEMQ&riu=http%3a%2f%2fwww.nolanfans.com%2fimages%2fposters%2finception%2fp4xfull.jpg&ehk=fTBnrxgKiU4dJQxZMWXrFmdjr5dpguBG6osjjkLxxPA%3d&risl=1&pid=ImgRaw&r=0" alt="Titanic">        </a>
+        <p>Inception</p>
+        <span class="genre">Thriller</span>
+        <span class="rating">⭐ 8.8</span>
+<button class="add-watchlist">Add to Watchlist</button>
+      </div>
+
+      <div class="movie-card" data-genre="romance" data-rating="7.9">
+        <a href="titanic.html">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.3FTVew9tvK_H3xVvvZpVGwHaKk?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Titanic">        </a>
+        <p>Titanic</p>
+        <span class="genre">Romance</span>
+        <span class="rating">⭐ 7.9</span>
+<button class="add-watchlist">Add to Watchlist</button>
+      </div>
+
+      <div class="movie-card" data-genre="drama" data-rating="8.7">
+        <a href="strangerthings.html">
+        <img src="https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vbWVkaWEucmJsLm1zL2ltYWdlP3U9JTJGZmlsZXMlMkYyMDE2JTJGMTAlMkYwOSUyRjYzNjExNTczNjY0MTExOTY0OC0xMDMzOTQ5NjA2X1NULVZpbnlsLVZvbC0xLUZyb250LUNvdmVyXzMwMDAuanBnJmhvPWh0dHBzJTNBJTJGJTJGYXo2MTY1Nzgudm8ubXNlY25kLm5ldCZzPTQyMiZoPWRiYmUxZjAzMjRkNzFiYTYwNThlMjcxNTVmNTQ4Yzg0NmQyNjUxNmNmODA2YmExZDUwODQxOTc5MjUyNzEyNzQmc2l6ZT05ODB4JmM9MjMzMDU1MzQwMiIsImV4cGlyZXNfYXQiOjE2MjA3OTU0Nzd9.-DxRrk-4pAKRHpYRdhVJyTH7_3_-9TE8ItN6vHx2U-g/img.jpg?width=1200&height=628" alt="Titanic">        </a>
+        <p>Stranger Things</p>
+        <span class="genre">Drama</span>
+        <span class="rating">⭐ 8.7</span>
+<button class="add-watchlist">Add to Watchlist</button>
+      </div>
+
+      <div class="movie-card" data-genre="romance" data-rating="8.9">
+        <a href="shiddat.html">
+        <img src="https://cdn.wallpapersafari.com/94/39/dozh10.jpg" alt="Titanic">        </a>
+        <p>Shiddat</p>
+        <span class="genre">Romance</span>
+        <span class="rating">⭐ 8.9</span>
+<button class="add-watchlist">Add to Watchlist</button>
+      </div>
+
+
+        <div class="movie-card" data-genre="anime" data-rating="9.2">
+        <a href="attackontitan.html">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.zUwfbv9ahuI-K20Q4meKIgHaML?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Titanic">        </a>
+        <p>Attack On Titan</p>
+        <span class="genre">Anime</span>
+        <span class="rating">⭐ 8.9</span>
+<button class="add-watchlist">Add to Watchlist</button>
+      </div>
+
+      <div class="movie-card" data-genre="thriller" data-rating="8.6">
+        <a href="parasite.html">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.Iofvy8ezL7QJxsyLk-dYXAHaLH?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Titanic">        </a>
+        <p>Parasite</p>
+        <span class="genre">Thriller</span>
+        <span class="rating">⭐ 8.6</span>
+<button class="add-watchlist">Add to Watchlist</button>
+      </div>
+
+      <div class="movie-card" data-genre="anime" data-rating="8.4">
+        <a href="yourname.html">
+<img src="https://wallpapers.com/images/hd/poster-of-your-name-anime-o0acbtx4l5jshrlb.jpg" alt="Titanic">        </a>
+        <p>Your Name</p>
+        <span class="genre">Anime</span>
+        <span class="rating">⭐ 8.4</span>
+<button class="add-watchlist">Add to Watchlist</button>
+      </div>
+    </main>
+  </div>
+
+       
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
+
+
